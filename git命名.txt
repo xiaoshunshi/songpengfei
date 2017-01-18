@@ -1,0 +1,52 @@
+1.创建文件夹：mkdir dirName
+2.打开文件夹：cd dirName
+3.显示当前文件路径：pwd
+4.创建git仓库（初始化git仓库）：git init
+5.查看git仓库的当前状态：git status
+6.(1)添加文件至暂存区:git add 文件名
+   (2)提交文件至git仓库：git commit -m "文件说明信息"
+7.查看文件内容：cat 文件名
+9.查看文件提交的历史记录:从最近到之前版本显示
+	git log  
+	版本号commit； 作者信息； 日期；提交描述信息
+  git log --pretty=oneline ：版本号及描述信息
+10.当前版本显示：HEAD
+	上一个版本:HEAD^
+	上上一个版本:HEAD^^
+	之前n个版本：HEAD~n
+11.查看所使用的命令的历史记录 
+	git reflog
+12.删除工作区的文件:rm 文件名
+	
+可通过git checkout -- 文件名
+	（扔掉当前修改，返回至上一次修改）  
+	
+13.把暂存区的文件，扔回到工作区
+	git reset HEAD 文件名
+14.删除版本库中及工作区的当前文件
+	git rm 文件名
+	并把删除信息提交至版本库
+	git commit -m "备注信息"
+	  不能通过git checkout -- 文件名，恢复
+	可通过git reset --hard 版本号 恢复文件
+
+15 创建秘钥：
+	ssh-keygen -t rsa -C "youremail@example.com"
+16.查看秘钥
+	cat ~/.ssh/id_rsa.pub
+	将秘钥复制到ssh-key中
+
+17 远程仓库 关联
+	git remote add origin (仓库路径)https://github.com/han-2016/gith5-8.git
+   将本地仓库push到远程仓库上
+	git push -u origin master
+
+18 远程仓库克隆
+	git clone 仓库地址
+19 克隆仓库之后，如果线上的仓库内容发生变化，是需要拉取新内容
+	git pull
+   本地在新内容的基础上，进行修改,修改后的数据需要上传到远程仓库
+	git push
+
+
+
